@@ -3,7 +3,6 @@ package org.example;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.here.commons.utils.JsonUtils;
 import com.here.umap.models.UMapTask;
-import com.here.umap.models.UMapTaskStatus;
 import com.here.xyz.XYZService;
 import com.here.xyz.exception.XYZParseException;
 import com.here.xyz.exception.XYZServiceExcpetion;
