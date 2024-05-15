@@ -2,7 +2,7 @@ package com.demo.dsa.sortingalgorithms;
 
 public class SelectionSort {
     public static void main(String[] args) {
-        int[] arrayOfNums = {6,5,2,8,9,4};
+        int[] arrayOfNums = {6,5,2,8,8,9,4};
         int[] sortedArray = sortUsingSelectionSort(arrayOfNums);
 
         for(int num : sortedArray){
@@ -14,20 +14,17 @@ public class SelectionSort {
         int lastIndex = arrayToBeSorted.length-1;
 
         while(lastIndex >= 1){
-            int highestValue = -1;
-            int indexOfHighestValue = lastIndex;
+            int indexOfHighestValue = 0;
             for(int i = 0; i<= lastIndex; i++){
-                if(arrayToBeSorted[i] > highestValue){
-                    highestValue = arrayToBeSorted[i];
+                if(arrayToBeSorted[i] > arrayToBeSorted[indexOfHighestValue]){
                     indexOfHighestValue = i;
                 }
             }
 
-            if(highestValue != -1){
-                int tempData = arrayToBeSorted[indexOfHighestValue];
-                arrayToBeSorted[indexOfHighestValue] = arrayToBeSorted[lastIndex];
-                arrayToBeSorted[lastIndex] = tempData;
-            }
+            int tempData = arrayToBeSorted[indexOfHighestValue];
+            arrayToBeSorted[indexOfHighestValue] = arrayToBeSorted[lastIndex];
+            arrayToBeSorted[lastIndex] = tempData;
+
             lastIndex--;
         }
 
